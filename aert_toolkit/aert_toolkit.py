@@ -22,13 +22,16 @@ class StackADT:
     def size(self):
         return len(self.stack)
 
-naive_calls = 0
-memo_calls = 0
+hanoi_stack = StackADT()
+
 
 def factorial(n):
     if n < 0: return "Error: Negative Input" # 
     if n == 0 or n == 1: return 1
     return n * factorial(n - 1)
+
+naive_calls = 0
+memo_calls = 0
 
 def fib_naive(n):
     global naive_calls
@@ -44,7 +47,6 @@ def fib_memo(n, memo={}):
     memo[n] = fib_memo(n - 1, memo) + fib_memo(n - 2, memo)
     return memo[n]
 
-hanoi_stack = StackADT()
 
 def hanoi(n, source, aux, dest):
     if n == 1:
