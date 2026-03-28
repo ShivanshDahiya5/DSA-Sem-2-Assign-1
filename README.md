@@ -61,7 +61,7 @@ As per the assignment requirements, the following files are included in the subm
 To execute the toolkit and view the results for all required test cases, use the following command in your terminal:
 
 ```bash
-python aert_toolkit.py
+aert_toolkit aert_toolkit.py
 
 ```
 
